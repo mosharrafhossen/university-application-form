@@ -1,93 +1,147 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ভার্সিটি আবেদন ফর্ম</title>
+    <title>University Application Form</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+
     <div class="contact-container">
-        <h2>ভার্সিটি আবেদন ফর্ম</h2>
-        <form id="applicationForm">
-            <!-- নাম -->
+        <h2>University Application Form</h2>
+
+        <form id="applicationForm" novalidate>
+
+            <!-- Full Name -->
             <div class="form-group">
-                <label for="name">পূর্ণ নাম:</label>
-                <input type="text" id="name" placeholder="আপনার পুরো নাম লিখুন">
+                <label for="name">Full Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
             </div>
 
-            <!-- জন্মতারিখ -->
+            <!-- Date of Birth -->
             <div class="form-group">
-                <label for="dob">জন্ম তারিখ:</label>
-                <input type="date" id="dob">
+                <label for="dob">Date of Birth:</label>
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required
+                >
             </div>
 
-            <!-- ইমেইল -->
+            <!-- Email -->
             <div class="form-group">
-                <label for="email">ইমেইল:</label>
-                <input type="email" id="email" placeholder="আপনার ইমেইল লিখুন">
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
             </div>
 
-            <!-- ফোন -->
+            <!-- Phone -->
             <div class="form-group">
-                <label for="phone">ফোন নম্বর:</label>
-                <input type="tel" id="phone" placeholder="আপনার ফোন নম্বর লিখুন">
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="01XXXXXXXXX"
+                    required
+                >
             </div>
 
-            <!-- ঠিকানা -->
+            <!-- Address -->
             <div class="form-group">
-                <label for="address">ঠিকানা:</label>
-                <textarea id="address" rows="3" placeholder="আপনার স্থায়ী ঠিকানা লিখুন"></textarea>
+                <label for="address">Address:</label>
+                <textarea
+                    id="address"
+                    name="address"
+                    rows="3"
+                    placeholder="Enter your permanent address"
+                    required
+                ></textarea>
             </div>
 
-            <!-- শিক্ষাগত যোগ্যতা -->
+            <!-- Education -->
             <div class="form-group">
-                <label for="education">শিক্ষাগত যোগ্যতা:</label>
-                <select id="education">
-                    <option value="">-- নির্বাচন করুন --</option>
-                    <option value="ssc">এস.এস.সি</option>
-                    <option value="hsc">এইচ.এস.সি </option>
-                    <option value="bsc">স্নাতক (BSc)</option>
-                    <option value="msc">স্নাতকোত্তর (MSc)</option>
+                <label for="education">Educational Qualification:</label>
+                <select id="education" name="education" required>
+                    <option value="">-- Select --</option>
+                    <option value="ssc">SSC</option>
+                    <option value="hsc">HSC</option>
+                    <option value="bsc">Bachelor (BSc)</option>
+                    <option value="msc">Master (MSc)</option>
                 </select>
             </div>
 
-            <!-- প্রফার্ড কোর্স -->
+            <!-- Course -->
             <div class="form-group">
-                <label for="course">পছন্দের কোর্স:</label>
-                <select id="course">
-                    <option value="">-- নির্বাচন করুন --</option>
-                    <option value="cse">কম্পিউটার বিজ্ঞান (CSE)</option>
-                    <option value="eee">ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং (EEE)</option>
-                    <option value="bba">বিজনেস অ্যাডমিন (BBA)</option>
-                    <option value="law">আইন (Law)</option>
+                <label for="course">Preferred Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Select --</option>
+                    <option value="cse">Computer Science (CSE)</option>
+                    <option value="eee">Electrical Engineering (EEE)</option>
+                    <option value="bba">Business Administration (BBA)</option>
+                    <option value="law">Law</option>
                 </select>
             </div>
 
-            <!-- লিঙ্গ -->
+            <!-- Gender -->
             <div class="form-group">
-                <label>লিঙ্গ:</label>
+                <label>Gender:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="gender" value="male"> পুরুষ</label>
-                    <label><input type="radio" name="gender" value="female"> মহিলা</label>
-                    <label><input type="radio" name="gender" value="other"> অন্যান্য</label>
+                    <label>
+                        <input type="radio" name="gender" value="male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                    </label>
                 </div>
             </div>
 
-            <!-- ফাইল আপলোড -->
+            <!-- File Upload -->
             <div class="form-group">
-                <label for="transcript">শিক্ষাগত সনদপত্র আপলোড:</label>
-                <input type="file" id="transcript">
+                <label for="transcript">Upload Academic Certificate:</label>
+                <input
+                    type="file"
+                    id="transcript"
+                    name="transcript"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                    required
+                >
             </div>
 
-            <!-- বার্তা / মন্তব্য -->
+            <!-- Message -->
             <div class="form-group">
-                <label for="message">মন্তব্য / অতিরিক্ত তথ্য:</label>
-                <textarea id="message" rows="4" placeholder="যদি কিছু যোগ করতে চান"></textarea>
+                <label for="message">Additional Information:</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Write something if needed"
+                ></textarea>
             </div>
 
-            <button type="submit">আবেদন পাঠান</button>
+            <button type="submit">Submit Application</button>
+
         </form>
+
         <p id="status"></p>
     </div>
 

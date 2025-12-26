@@ -1,4 +1,11 @@
-/* ----- Global Style ----- */
+/* ===============================
+   Google Font
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ===============================
+   Global Reset & Base Style
+================================ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,15 +22,17 @@ body {
     padding: 20px;
 }
 
-/* ----- Container ----- */
+/* ===============================
+   Main Container
+================================ */
 .contact-container {
-    background: #fff;
+    background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 600px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .contact-container:hover {
@@ -35,9 +44,12 @@ body {
     margin-bottom: 25px;
     color: #333;
     font-size: 26px;
+    font-weight: 600;
 }
 
-/* ----- Form Groups ----- */
+/* ===============================
+   Form Groups
+================================ */
 .form-group {
     margin-bottom: 18px;
     display: flex;
@@ -50,6 +62,7 @@ body {
     color: #555;
 }
 
+/* Input, Select, Textarea */
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -58,42 +71,54 @@ body {
     border: 1px solid #ccc;
     font-size: 15px;
     outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
     border-color: #6c5ce7;
-    box-shadow: 0 0 8px rgba(108,92,231,0.2);
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.25);
 }
 
-/* ----- Radio & Checkbox Groups ----- */
-.radio-group, .checkbox-group {
+/* File Input */
+input[type="file"] {
+    padding: 8px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+/* ===============================
+   Radio Group
+================================ */
+.radio-group {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.radio-group label,
-.checkbox-group label {
+.radio-group label {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-/* ----- Button ----- */
+/* ===============================
+   Submit Button
+================================ */
 button {
     width: 100%;
     padding: 14px;
     border: none;
     border-radius: 10px;
     background-color: #6c5ce7;
-    color: white;
+    color: #ffffff;
     font-size: 17px;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
@@ -101,7 +126,9 @@ button:hover {
     transform: scale(1.03);
 }
 
-/* ----- Status Message ----- */
+/* ===============================
+   Status Message
+================================ */
 #status {
     margin-top: 15px;
     text-align: center;
@@ -109,14 +136,16 @@ button:hover {
     font-size: 15px;
 }
 
-/* ----- Responsive Design ----- */
+/* ===============================
+   Responsive Design
+================================ */
 @media screen and (max-width: 768px) {
     .contact-container {
         padding: 25px 20px;
     }
 
-    .radio-group, .checkbox-group {
-        gap: 10px;
+    .radio-group {
+        gap: 12px;
     }
 }
 
